@@ -35,19 +35,24 @@ Agrega la url de tu instancia de Canvas LMS. Registra una nueva aplicación OAut
 
 **Observación:** La instancia Oauth creada en Canvas LMS es la misma que se utilizará en IDECDash Frontend e IDECDash Backend, si ya haz creado una deberás reutilizar las credenciales.
 
-`
+````
 Vue.prototype.$CLIENT_ID = 'xxxxx'
 
 Vue.prototype.$CLIENT_SECRET = 'xxxxxxxxx'
-`
+````
+
+***
 
 Url al end point de lanzanmiento de OAuth. Por defecto todas las instancias tienen el mismo uri, sin embargo puedes revisar la [api de canvas](https://canvas.instructure.com/doc/api/ "api de canvas") para asegurarte que no ha cambiado. 
-`
+
+````
 Vue.prototype.$CANVAS_LOGIN_URL = 'https://YOUR_INSTANCE.instructure.com/login/oauth2/'
-`
+````
+
+***
 
 Url de tu instalación del backend
 
-`
+````
 Vue.prototype.$URL_BACKEND = 'http://dashboard.cl'
-`
+````
