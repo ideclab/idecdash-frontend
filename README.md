@@ -2,7 +2,7 @@
 IDECDash Frontend es un componente de IDECDash, visite la wiki del repositorio para encontrar más información sobre este y otros componentes.
 
 ## Requisitos
-- ([Vue-cli](https://cli.vuejs.org/ "Vue-cli"))
+- [Vue-cli](https://cli.vuejs.org/ "Vue-cli")
 
 IDECDash frontend está desarrollada en VueJS 2, por lo cual, hereda todos los requisitos de instalación de una aplicación vuejs tradicional ([Ver requisitos aquí](https://vuejs.org/v2/guide/installation.html "Requisitos de vuejs")).
 
@@ -39,7 +39,7 @@ Vue.prototype.$CLIENT_ID = 'xxxxx'
 Vue.prototype.$CLIENT_SECRET = 'xxxxxxxxx'
 `
 
-Url al end point de lanzanmiento de OAuth. Por defecto todas las instancias tienen el mismo uri, sin embargo puedes revisar la ([api de canvas](https://canvas.instructure.com/doc/api/ "api de canvas")) para asegurarte que no ha cambiado. 
+Url al end point de lanzanmiento de OAuth. Por defecto todas las instancias tienen el mismo uri, sin embargo puedes revisar la [api de canvas](https://canvas.instructure.com/doc/api/ "api de canvas") para asegurarte que no ha cambiado. 
 `
 Vue.prototype.$CANVAS_LOGIN_URL = 'https://YOUR_INSTANCE.instructure.com/login/oauth2/'
 `
