@@ -1,27 +1,51 @@
-### IdecDash FrontEnd
+# IDECDash Frontend
+IDECDash Frontend es un componente de IDECDash, visite la wiki del repositorio para encontrar más información sobre este y otros componentes.
 
-Idec Front end es parte del proyecto IdecDash construido con Vue.js para visualizar el panel de datos provenientes de Canvas, excusivamente para profesores. El procesamiento de datos se realiza con una libreria construida en python y guardada en una base de datos postgres.
+## Requisitos
+- ([Vue-cli](https://cli.vuejs.org/ "Vue-cli"))
 
-### Funcionalidades
+IDECDash frontend está desarrollada en VueJS 2, por lo cual, hereda todos los requisitos de instalación de una aplicación vuejs tradicional ([Ver requisitos aquí](https://vuejs.org/v2/guide/installation.html "Requisitos de vuejs")).
 
-- Logueo con cuenta de Canvas
-- Obtencion de Información de Canvas (correos, nombres, cursos)
-- Visualización de recursos por curso
-- Analisis del contenidos del curso
+## Instalación
 
-### Datos
-- Los datos son obtenidos desde Canvas Data Portal https://portal.inshosteddata.com/docs
+1) Descarga el proyecto
 
-### Instalación
-Requerimientos:
+`git clone https://github.com/xxxxx/interactive_dashboard_backend/`
 
--
+2) Instala las dependencias
 
-#### Descargar el proyecto
-`git clone https://github.com/xxxxx/frontDashboardIDEClab`
-
-#### Instalar dependencias
 `npm install`
 
-#### Compilar el proyecto
-`npm run serve`
+3) Configura el archivo de entorno ubicado en la raiz. En el apartado configuración se explican las claves.
+
+`/Global.js`
+
+4) Compila el proyecto
+`npm run build`
+
+5) Exporta la carpeta dist a tu servidor
+
+## Configuración
+La aplicación hará uso de algunas propiedades globales definidas en la instancia de Vuejs que permitirán el lanzamiento inicial de Oauth y vincular el frontend con el backend, para ello se debe modificar el archivo `Global.js` ubicado en la raiz del proyecto. 
+
+*** 
+
+Agrega la url de tu instancia de Canvas LMS. Registra una nueva aplicación OAuth en Canvas LMS y agrega el id y secreto que te proporcionará.
+
+**Observación:** La instancia Oauth creada en Canvas LMS es la misma que se utilizará en IDECDash Frontend e IDECDash Backend, si ya haz creado una deberás reutilizar las credenciales.
+
+`
+Vue.prototype.$CLIENT_ID = 'xxxxx'
+Vue.prototype.$CLIENT_SECRET = 'xxxxxxxxx'
+`
+
+Url al end point de lanzanmiento de OAuth. Por defecto todas las instancias tienen el mismo uri, sin embargo puedes revisar la ([api de canvas](https://canvas.instructure.com/doc/api/ "api de canvas")) para asegurarte que no ha cambiado. 
+`
+Vue.prototype.$CANVAS_LOGIN_URL = 'https://YOUR_INSTANCE.instructure.com/login/oauth2/'
+`
+
+Url de tu instalación del backend
+
+`
+Vue.prototype.$URL_BACKEND = 'http://dashboard.cl'
+`
