@@ -54,5 +54,5 @@ Vue.prototype.$CANVAS_LOGIN_URL = 'https://YOUR_INSTANCE.instructure.com/login/o
 Url de tu instalación del backend
 
 ````
-Vue.prototype.$URL_BACKEND = 'http://dashboard.cl'
+Vue.prototype.$URL_BACKEND = 'https://YOUR-IDECDASH-BACKEND-INSTANCE.cl'
 ````
