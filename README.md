@@ -21,6 +21,7 @@ IDECDash frontend está desarrollada en VueJS 2, por lo cual, hereda todos los r
 `/Global.js`
 
 4) Compila el proyecto
+
 `npm run build`
 
 5) Exporta la carpeta dist a tu servidor
