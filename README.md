@@ -37,6 +37,7 @@ Agrega la url de tu instancia de Canvas LMS. Registra una nueva aplicación OAut
 
 `
 Vue.prototype.$CLIENT_ID = 'xxxxx'
+
 Vue.prototype.$CLIENT_SECRET = 'xxxxxxxxx'
 `
 
